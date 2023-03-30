@@ -14,7 +14,7 @@ function fun1(){
 
         document.querySelector('#box').disabled = true;
         document.querySelector('#butn').disabled = true;
-        window.location.href="http://localhost:4000/unfhshdhbmsdfdsh";
+        window.location.href="https://digtheriddlesca2023.onrender.com/unfhshdhbmsdfdsh";
     }
     else{
         x.style.backgroundColor = 'red';

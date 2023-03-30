@@ -122,7 +122,7 @@ function funcq1() {
       document.getElementById("clap").style.cssText = "visibility: visible;transition: 2s;font-size:50px";
       setTimeout(()=>{
         // fetch('http://localhost:4000/secondPage');
-        window.location.href=`http://localhost:4000/uhhdfnskhd6632`;
+        window.location.href=`https://digtheriddlesca2023.onrender.com/uhhdfnskhd6632`;
       }, 2000);
     }
   }

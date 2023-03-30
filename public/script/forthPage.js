@@ -15,7 +15,7 @@ function fun1(boxId, buttonId){
         document.getElementById(buttonId).disabled = true;
         count++;
         if(count===3) {
-            window.location.href = `http://localhost:4000/ufhsdhbfdhshn33434`;
+            window.location.href = `https://digtheriddlesca2023.onrender.com/ufhsdhbfdhshn33434`;
         }
     }
     else{
