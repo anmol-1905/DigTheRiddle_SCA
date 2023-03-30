@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dig The Riddle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/navbarResponsive.css">
+    <link rel="shortcut icon" href="./../images/favicon2.ico" type="image/x-icon">
+    <style>
+
+    * {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      .code {
+        font-weight: 900;
+      }
+      .question{
+        margin: 10px 50px;
+        text-align: center;
+        background-color: white;
+      }
+      .q1, .q2, .q3{
+        border-radius: 10px;
+        margin: 20px 20px 0px 20px;
+        text-align: left;
+        padding: 25px;
+      }
+      .a1,.a2,.a3{
+        margin-bottom: 30px;  
+      }
+      .abc{
+        padding: 2px; 
+        font-size: 27px ;
+        border-radius: 10px;
+        width: 43px;
+        text-align: center;
+        border: 2px solid #000000;
+        text-transform: uppercase;
+      }
+      .finalBox {
+        width: 70px;
+        height: 70px;
+        color: red;
+        font-size: 40px;
+      }
+      .riddle{
+        text-decoration: underline;
+        text-decoration-color: blue;
+        text-decoration-thickness: 10px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight: 550;
+        font-size: 35px;
+        margin-top: 50px;
+      }
+      hr{
+        height:3px;
+        border-width:0px;
+        color:rgb(50, 50, 50);
+        background-color:rgb(50,50,50);
+      }
+
+    </style>
+    
+</head>
+
+<body  style="background-color: #663dff;
+background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);">
+  <div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand code" style="color: white;font-family:Georgia, 'Times New Roman', Times, serif;"><\CodeWalkerz></a>
+          <img class="logoImage d-flex" role="search" src="images/SCA_LOGO-removebg-preview2.png">
+      </div>
+    </nav>
+  </div>
+  <div>
+  </div>
+  <div class="question" style="border-radius: 10px ; margin-left: 8%; margin-right: 8%;">
+    <div id="sca" class="final" style="margin: 80px 0 80px 0;">
+      <input id="a4b1" onchange="func4()" class="abc finalBox" type="text" maxlength="1" disabled value="?" style="border: none;">
+      <input id="a4b2" oninput="func4()" class="abc finalBox" type="text" maxlength="1" disabled value="?" style="border: none;">
+      <input id="a4b3" oninput="func4()" class="abc finalBox" type="text" maxlength="1" disabled value="?" style="border: none;">
+    </div>
+    <div id="clap" style="visibility: hidden;">
+      👏👏👏
+    </div>
+    <hr><hr>
+    <h2 class="riddle">Riddle 1</h2>
+    <div class="q1" style="font-size:23px;">
+      <p>In whatever direction he turns, I also turn in that direction and his name is my identity.</p>
+      <p>He comes in day and leaves at night but he always stays by our side.</p>
+      <p>Still can not figure it out?</p>
+      <p>I am a Zahra.</p>
+    </div>
+    <div class="a1">
+      <form action="">
+        <input id="q1b1" class="abc first" type="text" maxlength="1" oninput="funcq1()">
+        <input id="q1b2" class="abc first" type="text" maxlength="1" oninput="funcq1()">
+        <input id="q1b3" class="abc first" type="text" maxlength="1" oninput="funcq1()">
+        <input id="q1b4" class="abc first" type="text" maxlength="1" oninput="funcq1()">
+        <input id="q1b5" class="abc first" type="text" maxlength="1" oninput="funcq1()">
+        <input id="q1b6" class="abc first" type="text" maxlength="1" oninput="funcq1()">
+        <input id="q1b7" class="abc first" type="text" maxlength="1" oninput="funcq1()">
+        <input id="q1b8" class="abc first" type="text" maxlength="1" oninput="funcq1()">  
+        <input id="q1b9" class="abc first" type="text" maxlength="1" oninput="funcq1()">     
+      </form>
+    </div>
+    <hr><hr>
+
+    <h2 class="riddle">Riddle 2</h2>
+    <div class="q2" style="font-size:23px;">
+      <p>I want to go to Prince's ball party but I do not have an adorable dress and my stepmother does not want to let me go.</p>
+      <p>But what a wonderful thing it is to have a fairy friend, isn't it?</p>
+    <p>The fairy can make you ready for any kind of party in seconds with her magic and can turn your pumpkin into a carriage and your mice friend into horses for going to the party.</p>
+      <p>Now with the help of Fairy, I am ready to go to the party.</p>
+      <p>Can you guess who am I?</p>
+    </div>
+
+    <div class="a2">  
+      <input id="q2b1" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b2" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b3" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b4" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b5" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b6" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b7" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b8" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b9" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+      <input id="q2b10" class="abc second" type="text" maxlength="1" oninput="funcq2()">
+    </div>
+    <hr><hr>
+
+    <h2 class="riddle">Riddle 3</h2>
+    <div class="q3" style="font-size:23px; ">
+    <P> I have a pocket on my belly but I am not doraemon. I can punch but I am not a boxer and I only move by jumping.</P>
+    <P> I am Classified as Mammal but I am not human.</P>
+    <P>Give me the name of the country famous for me.</P>
+    </div>
+    <div class="a3">  
+      <input id="q3b1" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+      <input id="q3b2" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+      <input id="q3b3" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+      <input id="q3b4" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+      <input id="q3b5" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+      <input id="q3b6" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+      <input id="q3b7" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+      <input id="q3b8" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+      <input id="q3b9" class="abc third" type="text" maxlength="1" oninput="funcq3()">
+    </div>
+  </div>
+  <script src="script/firstPageScript.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

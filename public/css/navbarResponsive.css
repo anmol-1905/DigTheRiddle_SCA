@@ -1,0 +1,53 @@
+@media screen and (min-width: 901px) {
+    .code{
+      font-size: 40px;
+    }
+    .logoImage {
+      width:18vh;
+    }
+  }
+  
+    @media screen and (max-width: 900px) {
+      .code {
+        font-size: 30px;
+      }
+      .logoImage {
+        width: 15vh;
+      }
+    }
+    
+    @media screen and (max-width: 700px) {
+      .code {
+        font-size: 25px;
+      }
+      .logoImage {
+        width: 14vh;
+      }
+    }
+    
+    @media screen and (max-width: 500px) {
+      .code {
+        font-size: 20px;
+      }
+      .logoImage {
+        width: 12vh;
+      }
+    }
+
+    @media screen and (max-width: 350px) {
+      .code {
+        font-size: 15px;
+      }
+      .logoImage {
+        width: 10vh;
+      }
+    }
+
+    @media screen and (max-width: 270px) {
+      .code {
+        font-size: 13px;
+      }
+      .logoImage {
+        width: 8vh;
+      }
+    }

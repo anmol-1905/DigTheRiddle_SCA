@@ -1,0 +1,121 @@
+@media screen and (min-width: 1201px) {
+    .code{
+      font-size: 40px;
+    }
+    .logoImage {
+      width:18vh;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .code {
+      font-size: 35px;
+    }
+    .logoImage {
+      width: 16vh;
+    }
+  }
+  
+    @media screen and (max-width: 900px) {
+      .code {
+        font-size: 30px;
+      }
+      .logoImage {
+        width: 14vh;
+      }
+        .head{
+            font-size: 25px;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+    .head{
+        font-size: 20px;
+    }
+    .code {
+        font-size: 25px;
+      }
+      .logoImage {
+        width: 13vh;
+      }
+    }
+    
+    @media screen and (max-width: 550px) {
+        .head{
+            font-size: 17px;
+        }
+      .code {
+        font-size: 22px;
+      }
+      .logoImage {
+        width: 12vh;
+      }
+      .abc{
+        width: 100%;   
+      }
+      .btn{
+        
+        width : 60%;
+      }
+      
+    }
+
+    @media screen and (max-width: 450px) {
+      .code {
+        font-size: 20px;
+      }
+      .logoImage {
+        width: 10vh;
+      }
+      .head{
+        font-size: 15px;
+    }
+    }
+    @media screen and (max-width: 400px) {
+        .code {
+          font-size: 18px;
+        }
+        .logoImage {
+          width: 10vh;
+        }
+        .head{
+            font-size: 13px;
+        }
+      }
+    
+      @media screen and (max-width: 300px) {
+        .code {
+          font-size: 15px;
+        }
+        .logoImage {
+          width: 9vh;
+        }
+        .head{
+            font-size: 12px;
+        }
+      }
+
+    @media screen and (max-width: 290px) {
+      .code {
+        font-size: 13px;
+      }
+      .logoImage {
+        width: 8vh;
+      }
+    }
+    @media screen and (max-width: 250px) {
+        .code {
+          font-size: 11px;
+        }
+        .logoImage {
+          width: 7vh;
+        }
+      }
+      @media screen and (max-width: 200px) {
+        .code {
+          font-size:9px;
+        }
+        .logoImage {
+          width: 5vh;
+        }
+      }

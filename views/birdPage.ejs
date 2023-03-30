@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dig The Riddle</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../css/navbarResponsive.css">
+    <link rel="shortcut icon" href="./../images/favicon2.ico" type="image/x-icon">
+  
+    <style>
+      * {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        text-transform: uppercase;
+      }
+      .code{
+        font-weight: 900;
+      }
+      .body{
+        height: 100vh;
+      }    
+      .abc{
+        margin: 4% 0;
+        padding: 6%; 
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+        gap: 20px; 
+        border: 3px solid #663dff; 
+        height: 60%; 
+        border-radius: 20px; 
+        box-shadow: 3px 3px 10px black;
+      }
+      .xyz{
+        display: flex; 
+        justify-content:space-evenly;
+        align-items: center; 
+        background-color: white; 
+        border-radius: 20px; 
+        padding:5% 40px ; 
+        width: 80%; 
+      }
+      @media screen and (max-width: 800px){
+        .xyz{
+        flex-wrap: wrap; 
+        }
+      }
+    </style>
+  </head>
+
+  <body  style="background-color: #663dff;
+  background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%); background-repeat: no-repeat;">
+    <div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand code" style="color: white;font-family:Georgia, 'Times New Roman', Times, serif;"><\CodeWalkerz></a>
+            <img class="logoImage d-flex" role="search" src="images/SCA_LOGO-removebg-preview2.png">
+        </div>
+      </nav>
+    </div>
+
+  <div style="display: flex; justify-content: center; ">
+      
+    <div class="xyz" >
+       
+        <div><img class="coffee" src="./../images/blue-bird-drinking-coffee.png" alt="blue-bird-drinking-coffee" width="75%"  ></div>
+
+        <div class="abc" >
+             <input id="box" onfocus="fun2()" class="form-control " type="text">
+            <input type="button" id="butn" onclick="fun1()" class="btn btn-primary" value="SUBMIT" >  
+        </div>
+
+      </div>
+
+    </div>
+   
+    <script src="script/birdPage.js">
+    </script>
+  </body>
+</html>
