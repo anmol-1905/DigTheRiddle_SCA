@@ -106,11 +106,8 @@ app.get("/unfhshdhbmsdfdsh", (req, res)=>{
 
 
 app.get("/ufhsdhbfdhshn33434",async (req, res)=>{
-    let user = {teamId: "zRR09"};
-    if(req.cookies) {
-        const token = req.cookies.codewalkerztokenhere;
-        user = await jwt.verify(token, "codewalkerzJsonWebTokenForUser");
-    }
+    const token = req.cookies.codewalkerztokenhere;
+    const user = await jwt.verify(token, "codewalkerzJsonWebTokenForUser");
     const {teamId} = user;
     res.render('finalPage', {teamId});
 });
