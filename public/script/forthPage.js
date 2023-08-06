@@ -15,7 +15,27 @@ function fun1(boxId, buttonId){
         document.getElementById(buttonId).disabled = true;
         count++;
         if(count===3) {
-            window.location.href = `https://digtheriddlesca2023.onrender.com/ufhsdhbfdhshn33434`;
+
+            let permissionValue = 'e';
+            for(let i=0;i<9;i++){
+                permissionValue += String.fromCharCode(97+Math.floor(Math.random() * 26));
+            }
+            
+            const expirationDate = new Date();
+            expirationDate.setTime(expirationDate.getTime() + (2 * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + expirationDate.toUTCString();
+
+            const cookiesString = document.cookie;
+            const cookiesArray = cookiesString.split(";");
+        
+            const cookiesObject = {};
+            for (const cookie of cookiesArray) {
+            const [name, value] = cookie.trim().split("=");
+            cookiesObject[name] = value;
+            }
+            
+            document.cookie = "permission=" + permissionValue + "; codewalkerztokenhere=" + cookiesObject['codewalkerztokenhere'] + "; "+ expires + "; path=/";
+            window.location.href = `http://localhost:3000/ufhsdhbfdhshn33434`;
         }
     }
     else{

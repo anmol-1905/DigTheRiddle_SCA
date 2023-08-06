@@ -73,6 +73,9 @@ const allUsers = [
     },
     {
         teamId: "Ch98J"
+    },
+    {
+        teamId: "RIDDLES"
     }
 ];
 
