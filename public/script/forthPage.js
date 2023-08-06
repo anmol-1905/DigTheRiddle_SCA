@@ -35,7 +35,7 @@ function fun1(boxId, buttonId){
             }
             
             document.cookie = "permission=" + permissionValue + "; codewalkerztokenhere=" + cookiesObject['codewalkerztokenhere'] + "; "+ expires + "; path=/";
-            window.location.href = `http://localhost:3000/ufhsdhbfdhshn33434`;
+            window.location.href = `https://digtheriddlesca2023.onrender.com/ufhsdhbfdhshn33434`;
         }
     }
     else{
