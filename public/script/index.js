@@ -20,7 +20,7 @@ myForm.addEventListener('submit', (event) => {
     };
     async function apiCall(){
         let res = await fetch(url,other_params);
-        console.log(res);
+        // console.log(res);
         
         if(res.status === 200)
             window.location.href='http://localhost:3000/ufhsnvrjroxm934';
