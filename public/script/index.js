@@ -23,7 +23,7 @@ myForm.addEventListener('submit', (event) => {
         // console.log(res);
         
         if(res.status === 200)
-            window.location.href='http://localhost:3000/ufhsnvrjroxm934';
+            window.location.href='https://digtheriddlesca2023.onrender.com/ufhsnvrjroxm934';
         else if(res.status === 401)
             alert("Invalid Team Id, Please enter valid Team Id.");
         else if(res.status === 403)

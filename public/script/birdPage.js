@@ -35,7 +35,7 @@ function fun1(){
         
         document.cookie = "permission=" + permissionValue + "; codewalkerztokenhere=" + cookiesObject['codewalkerztokenhere'] + "; "+ expires + "; path=/";
 
-        window.location.href="http://localhost:3000/unfhshdhbmsdfdsh";
+        window.location.href="https://digtheriddlesca2023.onrender.com/unfhshdhbmsdfdsh";
     }
     else{
         x.style.backgroundColor = 'red';
