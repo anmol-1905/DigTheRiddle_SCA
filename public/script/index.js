@@ -27,7 +27,7 @@ myForm.addEventListener('submit', (event) => {
         else if(res.status === 401)
             alert("Invalid Team Id, Please enter valid Team Id.");
         else if(res.status === 403)
-            alert("You are already loggedIn in other device.")
+            alert("Team id is already logged in on another device.")
         else
             alert("An error occurred. Please try again later.");
 
