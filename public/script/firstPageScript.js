@@ -118,11 +118,32 @@ function funcq1() {
     str+=(document.getElementById("a4b1").value.toLowerCase());
     str+=(document.getElementById("a4b2").value.toLowerCase());
     str+=(document.getElementById("a4b3").value.toLowerCase());
-    console.log(str);
+    
     if(str==='sca') {
       document.getElementById("clap").style.cssText = "visibility: visible;transition: 2s;font-size:50px";
       setTimeout(()=>{
-        window.location.href="./secondPage.html";
+        
+        let x = 'b';
+        for(let i=0;i<9;i++){
+          x += String.fromCharCode(97+Math.floor(Math.random() * 26));
+        }
+        
+        const expirationDate = new Date();
+        expirationDate.setTime(expirationDate.getTime() + (2 * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + expirationDate.toUTCString();
+
+        const cookiesString = document.cookie;
+        const cookiesArray = cookiesString.split(";");
+      
+        const cookiesObject = {};
+        for (const cookie of cookiesArray) {
+          const [name, value] = cookie.trim().split("=");
+          cookiesObject[name] = value;
+        }
+        
+        document.cookie = "permission=" + x + "; codewalkerztokenhere=" + cookiesObject['codewalkerztokenhere'] + "; "+ expires + "; path=/";
+
+        window.location.href="http://localhost:3000/uhhdfnskhd6632";
       }, 4000);
     }
   }

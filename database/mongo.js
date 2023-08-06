@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 require('dotenv').config();
 
-const username = 'scanitjsr';
-const password = 'scanitjsr';
-
-const url = "mongodb+srv://scanitjsr:scanitjsr@cluster0.xl7zvty.mongodb.net/SCA_quiz";
+const url = process.env.DATABASE_URL;
 const connectionParams = {
     useNewUrlParser:true,
     useUnifiedTopology:true
@@ -20,4 +17,3 @@ const connectDB = () => {
 }
 
 module.exports = connectDB;
-

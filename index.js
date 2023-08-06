@@ -42,14 +42,12 @@ app.post("/registerAllUserToDatabase", (req, res)=>{
 
 app.delete("/deleteAllUsersFromDatabase", async(req, res)=>{
     try {
-        const users = await User.find({});
-        users.forEach(async user=>{
-            await User.findByIdAndDelete(user.id);
-        });
-        res.status(200).json({
+            await User.collection.drop();
+            res.status(200).json({
             success: "true"
         });
-    }catch(err) {
+    }
+    catch(err) {
         console.log("ERROR WHILE DELETION...");
         console.log(err.message);
         res.status(400).json({
@@ -58,67 +56,119 @@ app.delete("/deleteAllUsersFromDatabase", async(req, res)=>{
     }
 })
 
+app.put("/RestartDatabase", async(req, res)=>{
+    try {
+        const users = await User.find({});
+        users.forEach(async user=>{
+            await User.findByIdAndUpdate(user._id, {loginCount:0,token:null})
+        });
+        res.status(200).json({
+            success: "true",
+            message:"Database Restart Successfully"
+        });
+    }catch(err) {
+        console.log("Error Occured While Restarting Database");
+        console.log(err);
+
+        res.status(400).json({
+            success:"false",
+            message: err.message
+        })
+    }
+})
+
 
 app.get("/", (req,res, next)=>{
-    res.render('index');
+    res.render('index.ejs')
 })
 
 app.post("/yrtbsdf6529m7hdsfjh", async(req, res, next)=>{
     const {teamName, teamId} = req.body;
     const myuser = await User.findOne({teamId});
+
     if(!myuser) {
-        return res.status(200).render('index');
+        return res.status(401).json({
+            success:false,
+            message:"TeamId does not Exists !!!"
+        })
     }
-    if(myuser.loginCount===0) {
-        const token = await jwt.sign({teamName, teamId}, "codewalkerzJsonWebTokenForUser", {
-            expiresIn:"2d"
+
+    if(teamId === "RIDDLES" || myuser.loginCount===0) {
+        const token = await jwt.sign({teamName, teamId}, process.env.JSON_WEB_TOKEN_SECRET_KEY, {
+            expiresIn:"48h"
         });
+
         myuser.loginCount = 1;
         myuser.token = token;
         await myuser.save();
-        res.status(200).cookie('codewalkerztokenhere', token, {
-            httpOnly:true,
+
+        res.cookie('permission','aqwertyumn',{
+            httpOnly:false,
             expires: new Date(
-                Date.now()+24*60*60*1000
+                Date.now()+2*24*60*60*1000
+            )
+        })
+        res.status(200).cookie('codewalkerztokenhere', token, {
+            httpOnly:false,
+            expires: new Date(
+                Date.now()+2*24*60*60*1000
             ),
-        }).render('firstPage');
-    } else {    
+        }).json({
+            success:true
+        })
+    } 
+    else{    
         const cookieToken = req.cookies.codewalkerztokenhere;
-        if(cookieToken===myuser.token) {
-            res.status(200).render('firstPage');
+        if(cookieToken === myuser.token) {
+            res.status(200).json({
+                success:true
+            })
         } else {
-            res.status(400).render('index');
+            res.status(403).json({
+                success:false,
+                message:"User is already loggedIn in other device."
+            });
         }
     }
 });
 
+app.get("/ufhsnvrjroxm934", (req, res)=>{
+    const pageNo = req.cookies.permission;
+
+    if(pageNo[0] >= 'a')
+        res.render('firstPage');
+})
+
 app.get("/uhhdfnskhd6632", (req, res)=>{
-    res.render('secondPage');
+    const pageNo = req.cookies.permission;  
+
+    if(pageNo[0] >= 'b')
+        res.render('secondPage');
 })
 
 app.get("/ufdxuth897jhdhf", (req, res)=>{
+    const pageNo = req.cookies.permission;
+
+    if(pageNo[0] >= 'c')
     res.render('birdPage');
 });
 
-app.get("/unfhshdhbmsdfdsh", (req, res)=>{
-    res.render('forthPage');
-});
+app.get("/unfhshdhbmsdfdsh", async(req, res)=>{
+    const pageNo = req.cookies.permission;
 
+    if(pageNo[0] >= 'd')
+    res.render('forthPage');
+}); 
 
 app.get("/ufhsdhbfdhshn33434",async (req, res)=>{
     const token = req.cookies.codewalkerztokenhere;
-    const user = await jwt.verify(token, "codewalkerzJsonWebTokenForUser");
+    const user = await jwt.verify(token, process.env.JSON_WEB_TOKEN_SECRET_KEY);
     const {teamId} = user;
-    res.render('finalPage', {teamId});
-});
 
-app.get("/lastPage",async(req, res, next)=>{
-    const token = req.cookies.codewalkerztokenhere;
-    const user = await jwt.verify(token, "c2o0d2e3walkerz");
-    console.log(user['teamName']);
-    res.status(200).json({
-        user
-    });
+    const pageNo = req.cookies.permission;
+
+    if(pageNo[0] === 'e')
+        res.render('finalPage', {teamId});
 });
 
 app.get("/clearCookie", async(req, res)=>{
@@ -131,10 +181,9 @@ app.get("/clearCookie", async(req, res)=>{
     });
 })
 
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, ()=>{
-    console.log(`Running on port ${PORT}`);
+    console.log(`Running on port http://localhost:${PORT}`);
 });
 
 
